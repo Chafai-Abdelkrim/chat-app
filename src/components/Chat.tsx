@@ -31,6 +31,7 @@ const Chat = () => {
     >
       <header>
         <Github username='Chafai-Abdelkrim' />
+        
       </header>
     </motion.div>
   );

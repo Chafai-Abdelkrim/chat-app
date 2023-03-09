@@ -1,6 +1,6 @@
 import { RiGithubLine } from 'react-icons/ri';
 
-const GitHub = ({ username }: { username: string }) => {
+const Github = ({ username }: { username: string }) => {
   const nameArray = username.split('-');
 
   return (
@@ -17,4 +17,4 @@ const GitHub = ({ username }: { username: string }) => {
   );
 };
 
-export default GitHub;
+export default Github;

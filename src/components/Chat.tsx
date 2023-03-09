@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { useContext, useEffect, useRef } from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import FirebaseContext from '../FirebaseContext';
+import { Github } from './index';
 
 const Chat = () => {
   const { user, messageCollection } = useContext(FirebaseContext);
@@ -22,14 +23,16 @@ const Chat = () => {
 
   useEffect(scrollToBottom, [messages]);
 
-  return ( 
+  return (
     <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1}}
-        className='Chat'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="Chat"
     >
-        <header></header>
-    </motion.div> 
+      <header>
+        <Github username='Chafai-Abdelkrim' />
+      </header>
+    </motion.div>
   );
 };
 

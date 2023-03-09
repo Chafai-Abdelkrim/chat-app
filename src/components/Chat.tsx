@@ -4,11 +4,11 @@ import {
   orderBy,
   query,
 } from 'firebase/firestore';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useContext, useEffect, useRef } from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import FirebaseContext from '../FirebaseContext';
-import { Github } from './index';
+import { Github, Loading, SignIn, SignOut } from './index';
 
 const Chat = () => {
   const { user, messageCollection } = useContext(FirebaseContext);
@@ -30,9 +30,22 @@ const Chat = () => {
       className="Chat"
     >
       <header>
-        <Github username='Chafai-Abdelkrim' />
-        
+        <Github username="Chafai-Abdelkrim" />
+        {user ? <SignOut /> : <SignIn />}
       </header>
+      {loading ? (
+        <Loading />
+      ) : (
+        <motion.div className="Messages" layoutScroll>
+          <div id="top" />
+          <AnimatePresence>
+            {messages?.map((message) => (
+              <Message key={message.id} message={message} />
+            ))}
+          </AnimatePresence>
+          <div ref={bottom} />
+        </motion.div>
+      )}
     </motion.div>
   );
 };

@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useContext, useEffect, useRef } from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import FirebaseContext from '../FirebaseContext';
-import { Github, Loading, SignIn, SignOut } from './index';
+import { Github, Loading, Message, SignIn, SignOut } from './index';
 
 const Chat = () => {
   const { user, messageCollection } = useContext(FirebaseContext);

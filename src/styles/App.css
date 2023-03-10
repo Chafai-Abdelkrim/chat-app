@@ -1,3 +1,20 @@
 .App {
-    height: 200vh;
+    font-family: 'Roboto Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-whisper);
+}
+
+.Loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1;
+}
+
+.Messages {
+    font-family: 'Poppins', sans-serif;
 }

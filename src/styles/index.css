@@ -1,17 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
 :root {
-    --clr-ube: #8c7acb;
-    --clr-portage: #9376ee;
-    --clr-whisper: #f6eff8;
-    --clr-mineshaft: #2a2a2a;
+  --clr-ube: #8c7acb;
+  --clr-portage: #9376ee;
+  --clr-whisper: #f6eff8;
+  --clr-mineshaft: #2a2a2a;
+}
+
+/* Scrollbar CSS */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #f6eff8 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f6eff8;
+  border-radius: 4px;
+  border: 0px solid #ffffff;
 }

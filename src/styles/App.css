@@ -111,7 +111,70 @@
 }
 
 .Message {
-    
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.Message img {
+    user-select: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 100vmax;
+}
+
+.Message .Button {
+    padding: 0;
+    order: 2;
+    width: 35px;
+    height: 35px;
+    border-radius: 100vmax;
+    align-self: center;
+}
+
+.Text {
+    max-width: min(650px, calc(100% - 88px));
+    position: relative;
+    padding: 9px 14px;
+    align-self: center;
+    background-color: var(--clr-portage);
+    color: var(--clr-whisper);
+    border-radius: 20px 20px 20px 0;
+}
+
+.Text p {
+    word-break: break-word;
+    line-height: 1.35;
+}
+
+.Text p::after {
+    content: '';
+    width: 40px;
+    display: inline-block;
+}
+
+.Text p .Time {
+    position: absolute;
+    right: 14px;
+    bottom: 9px;
+    display: inline-block;
+    font-size: 13px;
+    color: var(--clr-mineshaft);
+    user-select: none;
+}
+
+.Message.sent {
+    justify-content: flex-end;
+}
+
+.Message.sent .Text {
+    max-width: min(650px, calc(100% - 132px));
+    order: -1;
+    border-radius: 20px 20px 0 20px;
+}
+
+.Message.sent .Button {
+    order: -2;
 }
 
 .Form {

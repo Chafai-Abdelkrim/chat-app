@@ -1,82 +1,146 @@
 .App {
-    font-family: 'Roboto Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--clr-whisper);
+  font-family: 'Roboto Mono', monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to left bottom,
+    #8c7acb,
+    #8e79d4,
+    #8f78dd,
+    #9177e5,
+    #9376ee
+  );
 }
 
 .Loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
 }
 
 .Button {
-    width: fit-content;
-    padding: 10px 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: rgb(147,118,238);
-    background-color: linear-gradient(85deg, rgba(147,118,238,1) 26%, rgba(140,122,203,1) 92%);
-    color: var(--clr-whisper);
-    border-radius: 10px;
-    user-select: none;
-    cursor: pointer;
-    transition: color 0.5s, background-color 0.5s;
-    font-size: 1rem;
-    font-weight: 500;
-
+  width: fit-content;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-image: linear-gradient(
+    to left bottom,
+    #8c7acb,
+    #8e79d4,
+    #8f78dd,
+    #9177e5,
+    #9376ee
+  );
+  color: var(--clr-whisper);
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.5s, background-image 0.5s;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .Button svg {
-    margin-inline: -2px;
+  margin-inline: -2px;
 }
 
 .Button:hover {
-    background-color: transparent;
-    border: 2px solid var(--clr-ube);
-    color: var(--clr-mineshaft);
-    padding: 8px 12px;
+  background: transparent;
+  border: 2px solid var(--clr-ube);
+  color: var(--clr-mineshaft);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
 }
 
 .Chat {
-    height: 100vh;
-    width: 100%;
-    max-width: 1000px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  height: 100vh;
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .Chat header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, .1);  
-    backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding-inline: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(5px);
 }
 
 .Chat header .Github {
-    background-color: transparent;
-    color: var(--clr-mineshaft);
-    border-radius: 0;
+  background-image: none;
+  color: var(--clr-mineshaft);
 }
 
 .Chat header .Github:hover {
-    border-bottom: ;
+  color: var(--clr-whisper);
+  padding: 10px 14px;
+  border: none;
+  box-shadow: none;
 }
 
 .Messages {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(5px);
+}
+
+.Messages #top {
+  flex: 1 1;
+}
+
+.Message {
+    
+}
+
+.Form {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.Form input {
+    padding: 10px 16px;
+    flex: 1 1;
+    border-radius: 100vmax;
+    color: var(--clr-mineshaft);
+    font-size: 15px;
+    transition: color 0.2s, opacity 0.5s;
+}
+
+.Form input:focus {
+    color: var(--clr-mineshaft);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.Form input:disabled {
+    opacity: 0.7;
+}
+
+.Form .Button {
+    border-radius: 100vmax;
 }

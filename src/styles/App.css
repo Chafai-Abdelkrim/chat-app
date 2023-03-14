@@ -208,3 +208,15 @@
 .Form .Button {
   border-radius: 100vmax;
 }
+
+@media (max-width: 524px) {
+  .Chat header {
+    margin: -1rem;
+    padding-inline: .8rem;
+    margin-bottom: 0px;
+    border-radius: 0 0 1rem 1rem;
+  }
+  .Chat header .Button {
+    font-size: .8rem;
+  }
+}

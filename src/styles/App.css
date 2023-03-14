@@ -98,6 +98,7 @@
   flex-direction: column;
   gap: 10px;
   flex: 1 1;
+  padding-inline: 1rem;
   overflow-x: hidden;
   overflow-y: auto;
   border-radius: 1rem;
@@ -111,70 +112,70 @@
 }
 
 .Message {
-    display: flex;
-    align-items: flex-end;
-    gap: 8px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
 }
 
 .Message img {
-    user-select: none;
-    width: 45px;
-    height: 45px;
-    border-radius: 100vmax;
+  user-select: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 100vmax;
 }
 
 .Message .Button {
-    padding: 0;
-    order: 2;
-    width: 35px;
-    height: 35px;
-    border-radius: 100vmax;
-    align-self: center;
+  padding: 0;
+  order: 2;
+  width: 35px;
+  height: 35px;
+  border-radius: 100vmax;
+  align-self: center;
 }
 
 .Text {
-    max-width: min(650px, calc(100% - 88px));
-    position: relative;
-    padding: 9px 14px;
-    align-self: center;
-    background-color: var(--clr-portage);
-    color: var(--clr-whisper);
-    border-radius: 20px 20px 20px 0;
+  max-width: min(650px, calc(100% - 88px));
+  position: relative;
+  padding: 9px 14px;
+  align-self: center;
+  background-color: var(--clr-portage);
+  color: var(--clr-whisper);
+  border-radius: 20px 20px 20px 0;
 }
 
 .Text p {
-    word-break: break-word;
-    line-height: 1.35;
+  word-break: break-word;
+  line-height: 1.35;
 }
 
 .Text p::after {
-    content: '';
-    width: 40px;
-    display: inline-block;
+  content: '';
+  width: 40px;
+  display: inline-block;
 }
 
 .Text p .Time {
-    position: absolute;
-    right: 14px;
-    bottom: 9px;
-    display: inline-block;
-    font-size: 13px;
-    color: var(--clr-mineshaft);
-    user-select: none;
+  position: absolute;
+  right: 14px;
+  bottom: 9px;
+  display: inline-block;
+  font-size: 13px;
+  color: var(--clr-mineshaft);
+  user-select: none;
 }
 
 .Message.sent {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .Message.sent .Text {
-    max-width: min(650px, calc(100% - 132px));
-    order: -1;
-    border-radius: 20px 20px 0 20px;
+  max-width: min(650px, calc(100% - 132px));
+  order: -1;
+  border-radius: 20px 20px 0 20px;
 }
 
 .Message.sent .Button {
-    order: -2;
+  order: -2;
 }
 
 .Form {
@@ -187,23 +188,23 @@
 }
 
 .Form input {
-    padding: 10px 16px;
-    flex: 1 1;
-    border-radius: 100vmax;
-    color: var(--clr-mineshaft);
-    font-size: 15px;
-    transition: color 0.2s, opacity 0.5s;
+  padding: 10px 16px;
+  flex: 1 1;
+  border-radius: 100vmax;
+  color: var(--clr-mineshaft);
+  font-size: 15px;
+  transition: color 0.2s, opacity 0.5s;
 }
 
 .Form input:focus {
-    color: var(--clr-mineshaft);
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  color: var(--clr-mineshaft);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .Form input:disabled {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .Form .Button {
-    border-radius: 100vmax;
+  border-radius: 100vmax;
 }

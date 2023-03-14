@@ -9,7 +9,7 @@
 	<h3> 👇 live demo 👇 </h3>
 </div>
 
-[<img alt="screenShot of site" width="900px" src="./readme-imgs/site-screenshot.png" />](https://chat-app-61c03.firebaseapp.com/)
+[<img alt="screenShot of site" width="900px" src="./readme-imgs/site-screenshot.png" />](http://chafai-abdelkrim.github.io/chat-app)
 
 ## 📝 Description
 My Take on building a simple Chat App.<br>
